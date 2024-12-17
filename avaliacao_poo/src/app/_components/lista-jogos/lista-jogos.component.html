@@ -1,1 +1,5 @@
-<p>lista-jogos works!</p>
+<div *ngFor="let jogo of jogos">
+  <h3>{{ jogo.titulo }} ({{ jogo.anoPublicacao }})</h3>
+  <p>{{ jogo.exibirRegras() }}</p>
+  <button (click)="removerJogo(jogo.titulo)">Remover</button>
+</div>

@@ -1,1 +1,12 @@
-<p>formulario-jogos works!</p>
+<form (ngSubmit)="adicionarJogo()">
+  <input [(ngModel)]="titulo" placeholder="Título" name="titulo" required />
+  <input [(ngModel)]="anoPublicacao" placeholder="Ano" name="anoPublicacao" type="number" required />
+  <input [(ngModel)]="fabricante" placeholder="Fabricante" name="fabricante" required />
+  <select [(ngModel)]="tipo" name="tipo">
+    <option value="tabuleiro">Jogo de Tabuleiro</option>
+    <option value="carta">Jogo de Carta</option>
+  </select>
+  <input [(ngModel)]="atributoEspecifico" placeholder="Número de jogadores ou idade mínima" name="atributoEspecifico" type="number" required />
+  <button type="submit">Adicionar Jogo</button>
+</form>
+

@@ -1,13 +1,28 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { BibliotecaService } from '../../biblioteca.service';
+import { Jogo } from '../../models/jogo.model';
 
 @Component({
   selector: 'app-lista-jogos',
-  imports: [FormsModule, CommonModule],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './lista-jogos.component.html',
-  styleUrl: './lista-jogos.component.css'
 })
 export class ListaJogosComponent {
+  jogos: Jogo[] = [];
 
+  constructor(private bibliotecaService: BibliotecaService) {
+    this.carregarJogos();
+  }
+
+  carregarJogos(): void {
+    this.jogos = this.bibliotecaService.listarJogos();
+  }
+
+  removerJogo(titulo: string): void {
+    this.bibliotecaService.removerJogo(titulo);
+    this.carregarJogos();
+  }
 }
+
