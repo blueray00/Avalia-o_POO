@@ -6,7 +6,7 @@ import { ListaJogosComponent } from "../lista-jogos/lista-jogos.component";
 
 @Component({
   selector: 'app-body',
-  imports: [FooterComponent, HeaderComponent, FormularioJogosComponent, ListaJogosComponent],
+  imports: [HeaderComponent, FormularioJogosComponent, ListaJogosComponent],
   templateUrl: './body.component.html',
   styleUrl: './body.component.css'
 })
