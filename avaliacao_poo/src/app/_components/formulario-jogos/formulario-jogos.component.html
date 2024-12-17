@@ -1,12 +1,96 @@
-<form (ngSubmit)="adicionarJogo()">
-  <input [(ngModel)]="titulo" placeholder="Título" name="titulo" required />
-  <input [(ngModel)]="anoPublicacao" placeholder="Ano" name="anoPublicacao" type="number" required />
-  <input [(ngModel)]="fabricante" placeholder="Fabricante" name="fabricante" required />
-  <select [(ngModel)]="tipo" name="tipo">
-    <option value="tabuleiro">Jogo de Tabuleiro</option>
-    <option value="carta">Jogo de Carta</option>
-  </select>
-  <input [(ngModel)]="atributoEspecifico" placeholder="Número de jogadores ou idade mínima" name="atributoEspecifico" type="number" required />
-  <button type="submit">Adicionar Jogo</button>
-</form>
+<div class="container mt-4">
+  <!-- Card do formulário -->
+  <div class="card shadow">
+    <div class="card-header bg-primary text-white">
+      <h4 class="mb-0">Adicionar Novo Jogo</h4>
+    </div>
+    <div class="card-body">
+      <!-- Formulário -->
+      <form (ngSubmit)="adicionarJogo()">
+        <!-- Nome do Jogo -->
+        <div class="mb-3">
+          <label for="titulo" class="form-label">Nome do Jogo</label>
+          <input
+            [(ngModel)]="titulo"
+            id="titulo"
+            type="text"
+            name="titulo"
+            class="form-control"
+            placeholder="Digite o título do jogo"
+            required
+          />
+        </div>
+
+        <!-- Ano de Publicação -->
+        <div class="mb-3">
+          <label for="anoPublicacao" class="form-label">Ano de Publicação</label>
+          <input
+            [(ngModel)]="anoPublicacao"
+            id="anoPublicacao"
+            type="number"
+            name="anoPublicacao"
+            class="form-control"
+            placeholder="Digite o ano de publicação"
+            required
+          />
+        </div>
+
+        <!-- Fabricante -->
+        <div class="mb-3">
+          <label for="fabricante" class="form-label">Fabricante</label>
+          <input
+            [(ngModel)]="fabricante"
+            id="fabricante"
+            type="text"
+            name="fabricante"
+            class="form-control"
+            placeholder="Digite o nome do fabricante"
+            required
+          />
+        </div>
+
+        <!-- Tipo do Jogo -->
+        <div class="mb-3">
+          <label for="tipo" class="form-label">Tipo do Jogo</label>
+          <select
+            [(ngModel)]="tipo"
+            id="tipo"
+            name="tipo"
+            class="form-select"
+            required
+          >
+            <option value="tabuleiro">Jogo de Tabuleiro</option>
+            <option value="carta">Jogo de Carta</option>
+          </select>
+        </div>
+
+        <!-- Atributo Específico -->
+        <div class="mb-3">
+          <label for="atributoEspecifico" class="form-label">
+            Número de Jogadores (Jogo de Tabuleiro) ou Idade Mínima (Jogo de Carta)
+          </label>
+          <input
+            [(ngModel)]="atributoEspecifico"
+            id="atributoEspecifico"
+            type="number"
+            name="atributoEspecifico"
+            class="form-control"
+            placeholder="Ex: 4 jogadores ou 8 anos"
+            required
+          />
+        </div>
+
+        <!-- Botão -->
+        <div class="text-end">
+          <button type="submit" class="btn btn-success px-4">
+            Adicionar jogo
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
 
