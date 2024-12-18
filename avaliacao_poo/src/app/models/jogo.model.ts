@@ -19,7 +19,7 @@ export class JogoTabuleiro extends Jogo {
   }
 
   exibirRegras(): string {
-    return `O jogo de tabuleiro "${this.titulo}" é para até ${this.numeroJogadores} jogadores.`;
+    return `O jogo de tabuleiro "${this.titulo}" é para até no máximo ${this.numeroJogadores} jogadores.`;
   }
 }
 

@@ -2,23 +2,14 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  max-width: 18rem;
-  margin: 0 auto;
+  max-width: 100%; /* Evita que ultrapasse o container */
   height: auto;
-}
-
-.card-header {
-  background-color: #f8f9fa;
-  font-weight: bold;
+  margin: 0 auto;
 }
 
 .card-body {
   background-color: #ffffff;
   padding: 10px;
-}
-
-.card-title {
-  font-size: 1.25rem;
 }
 
 .card-text {
@@ -27,7 +18,11 @@
   overflow-y: auto;
 }
 
-.btn-danger {
-  width: 100%;
-  margin-top: 10px;
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.container-fluid {
+  overflow-x: hidden; /* Evita rolagem horizontal */
 }
