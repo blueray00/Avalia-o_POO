@@ -12,11 +12,13 @@ export class BibliotecaService {
   }
 
   removerJogo(titulo: string): void {
-    this.biblioteca = this.biblioteca.filter(jogo => jogo.titulo !== titulo);
+    const index = this.biblioteca.findIndex(jogo => jogo.titulo === titulo);
+    if (index !== -1) {
+      this.biblioteca.splice(index, 1);
+    }
   }
 
   listarJogos(): Jogo[] {
     return this.biblioteca;
   }
 }
-
