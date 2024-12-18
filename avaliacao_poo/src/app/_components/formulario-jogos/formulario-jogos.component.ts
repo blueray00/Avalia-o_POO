@@ -37,7 +37,6 @@ export class FormularioJogosComponent {
       this.bibliotecaService.adicionarJogo(jogo);
     }
 
-    // Resetar o formulário
     this.titulo = '';
     this.anoPublicacao = 0;
     this.fabricante = '';

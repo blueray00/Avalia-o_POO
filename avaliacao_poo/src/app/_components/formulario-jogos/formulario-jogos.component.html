@@ -1,13 +1,10 @@
 <div class="container mt-4">
-  <!-- Card do formulário -->
   <div class="card shadow">
     <div class="card-header bg-dark text-white">
       <h4 class="mb-0">Adicionar Novo Jogo</h4>
     </div>
     <div class="card-body">
-      <!-- Formulário -->
       <form (ngSubmit)="adicionarJogo()">
-        <!-- Nome do Jogo -->
         <div class="mb-3">
           <label for="titulo" class="form-label">Nome do Jogo</label>
           <input
@@ -21,7 +18,6 @@
           />
         </div>
 
-        <!-- Ano de Publicação -->
         <div class="mb-3">
           <label for="anoPublicacao" class="form-label">Ano de Publicação</label>
           <input
@@ -35,7 +31,6 @@
           />
         </div>
 
-        <!-- Fabricante -->
         <div class="mb-3">
           <label for="fabricante" class="form-label">Fabricante</label>
           <input
@@ -49,7 +44,6 @@
           />
         </div>
 
-        <!-- Tipo do Jogo -->
         <div class="mb-3">
           <label for="tipo" class="form-label">Tipo do Jogo</label>
           <select
@@ -64,7 +58,6 @@
           </select>
         </div>
 
-        <!-- Atributo Específico -->
         <div class="mb-3">
           <label for="atributoEspecifico" class="form-label">
             Número de Jogadores (Jogo de Tabuleiro) ou Idade Mínima (Jogo de Carta)
@@ -80,7 +73,6 @@
           />
         </div>
 
-        <!-- Botão -->
         <div class="text-end">
           <button type="submit" class="btn btn-success px-4">
             Adicionar jogo
